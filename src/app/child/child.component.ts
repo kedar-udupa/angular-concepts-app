@@ -5,7 +5,7 @@ import { Component, OnInit,  Input, Output, EventEmitter, OnChanges, DoCheck, Si
   templateUrl: './child.component.html',
   styleUrls: ['./child.component.css']
 })
-export class ChildComponent implements OnInit, OnChanges {
+export class ChildComponent implements OnInit, OnChanges,DoCheck {
 
   artist : {
     name :string,
@@ -24,6 +24,12 @@ export class ChildComponent implements OnInit, OnChanges {
   {
     console.log("onchanges fires before onInit."); 
     console.log("It can be used to check value of @input variable before component Initilization."); 
+  }
+
+  ngDoCheck()
+  {
+    console.log("Do check implemented.");
+    
   }
 
   ngOnChanges(changes: SimpleChanges) 
