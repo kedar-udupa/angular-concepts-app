@@ -1,0 +1,8 @@
+<div class="pipe"  id="out">
+    <div id="inp">
+        <input type="number" [(ngModel)] ="multiplier" >
+        <input type="number" [(ngModel)] ="multiplicant" >
+    </div>
+
+    <h2>{{multiplier}} * {{multiplicant}} == {{ multiplier | wordCount:multiplicant }}</h2>
+</div>

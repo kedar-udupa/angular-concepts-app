@@ -1,0 +1,14 @@
+<div class="int">
+  <h1>Data Binding</h1>
+  <input type="text" [(ngModel)] = "personName" [value] = "personName" >
+  <h3>Welcome {{personName}}</h3>
+</div>
+
+
+<input type="text" [(ngModel)] = "imgSource">
+<div align="center" id="propBind">
+  <h3>Property Binding</h3>
+  <pre ngNonBindable>Image [src]="imgSource"</pre>
+  <img [src]="imgSource" alt="Image Not Found.." width="400px">
+</div>
+

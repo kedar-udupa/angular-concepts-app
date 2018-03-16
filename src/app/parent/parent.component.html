@@ -1,0 +1,16 @@
+<h2>Component Interaction</h2>
+
+<div>
+    <h3>Send form data to child component</h3>
+    <div class="form">
+        <input type="text" placeholder="Artist Name..." #name >
+        <input type="text" placeholder="Album..." #album>
+        <input type="number" placeholder="Year..." #year>
+        <input type="submit" value="Send Data" (click)="sendData(name.value, album.value, year.value);">
+    </div>
+</div>
+<div id="child">
+    <app-child [person] = " people "  (childRecievedData) = "doSomething($event)"></app-child>
+</div>
+
+

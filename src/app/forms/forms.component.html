@@ -1,0 +1,78 @@
+<div id="tForm">
+  <h2>Template Driven Forms</h2>
+  <div class="container">
+      <form (ngSubmit)="onSubmit()" #heroForm="ngForm" >
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" name="userName" required placeholder="name..." [(ngModel)]= "uname" #name="ngModel" minlength="4">
+          <div  class="errors" *ngIf="name.errors && (name.dirty || name.touched)">
+            Name is invalid.
+          </div>
+        </div>
+  
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" class="form-control" id="age" name="age" required placeholder="age" [(ngModel)]= " uage " #age="ngModel" max="80" min="13">
+          <div class="errors" *ngIf="age.errors && (age.dirty || age.touched)">
+            Age is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+            <label for="mail">Email</label>
+            <input type="email" class="form-control" id="mail" name="email" placeholder="Email..." [(ngModel)]= " uemail " #email="ngModel" minlength="7" maxlength="25" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+            <div class="errors" *ngIf="email.errors && (email.dirty || email.touched)">
+              Email is invalid.
+            </div>
+          </div>
+        
+          <div class="form-group">
+              <label for="country">Select Country</label>
+        <select name="country" id=""  [(ngModel)]= " ucountry " #country="ngModel" required>
+          <option [value]="country" *ngFor="let country of countries">{{country}}</option>
+        </select>
+        </div>
+        <button type="submit" class="btn btn-success" (click)="addUser()" [disabled]= " email.invalid || age.invalid || name.invalid || country.invalid">Submit</button>
+      </form>
+      
+  </div>
+</div>
+
+
+
+<div>
+  <h3>model driven forms</h3>
+  <div id="mForm">
+    <form action="" novalidate [formGroup]="modelDrivenFormData">
+        <div class="form-group">
+            <label for="dept">Department</label>
+            <input type="text" class="form-control" id="dept" name="dept" formControlName="department" [ngClass]="{danger : modelDrivenFormData.controls.department.invalid, success : modelDrivenFormData.controls.department.valid}">
+            <div class="errors" 
+            *ngIf="modelDrivenFormData.controls.department.invalid && (modelDrivenFormData.controls.department.touched || modelDrivenFormData.controls.department.dirty)"> 
+            department is invalid
+       </div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password" formControlName="password" [ngClass]="{danger : modelDrivenFormData.controls.password.invalid, success : modelDrivenFormData.controls.password.valid}">
+            <div class="errors"
+            *ngIf="modelDrivenFormData.controls.password.errors && (modelDrivenFormData.controls.password.dirty || modelDrivenFormData.controls.password.touched)">
+         Password is required
+       </div>
+        </div>
+
+        <div class="form-group">
+            <label for="contact">Contact</label>
+            <input type="text" class="form-control" id="contact" name="contact" formControlName="contact" [ngClass]="{danger : modelDrivenFormData.controls.contact.invalid, success : modelDrivenFormData.controls.contact.valid}">
+            <div class="errors" 
+            *ngIf="modelDrivenFormData.controls.contact.invalid && (modelDrivenFormData.controls.contact.dirty || modelDrivenFormData.controls.contact.touched)"> 
+            contact is invalid
+       </div>
+        </div>
+
+        <button type="submit" [disabled]="modelDrivenFormData.controls.contact.invalid ||modelDrivenFormData.controls.password.invalid || modelDrivenFormData.controls.department.invalid" (click)="addUser()">Submit</button>
+    </form>
+   
+  </div>
+</div>

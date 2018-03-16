@@ -1,0 +1,32 @@
+div#out
+{
+    padding: 20px;
+    background-color: darkgrey;
+    display: inline-block;
+    margin: auto;
+}
+
+div#inp
+{
+    padding: 20px;
+    background-color: darkgrey;
+    display: inline-block;
+    margin: auto;
+}
+
+#inp input
+ {
+    width: 100%;
+    padding: 6px;
+    display: inline-block;
+    border: 1px solid rgb(228, 59, 59);
+    border-radius: 4px;
+    box-sizing: initial;
+   
+}
+
+input
+{
+    
+    margin: 12px, auto;
+}

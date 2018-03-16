@@ -1,0 +1,19 @@
+<div class="service" align = "center">
+    <h3>Http Service</h3>
+    <button (click)="useService();" id="btn">Click Me.</button>
+</div>
+
+  <div *ngIf = "data != undefined">
+  <table  id="customers" >
+      <tr>
+          <th>Name</th>
+          <th>Email</th>
+        <!--> <th>Image</th>  <-->
+        </tr>
+    <tr *ngFor="let item of data;let i = index">
+      <td>{{ data[i].name }}</td>
+      <td>{{ data[i].email }}</td>
+    <!-->   <td><img [src]="data[i].image" alt=""></td> <-->  
+    </tr> 
+  </table>
+</div>

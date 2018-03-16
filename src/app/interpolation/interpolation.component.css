@@ -1,0 +1,31 @@
+
+.int h1 
+{
+    text-align: center;
+    font-size: 22px;
+}
+
+.int input
+{
+    display: block;
+    padding: 5px;
+    margin: auto;
+}
+
+.int h3
+{
+    text-align: center;
+}
+
+input
+{
+ display: inline;
+ margin: auto;
+ padding: 13px;
+ border-radius: 3px;
+}
+
+img
+{
+    display: inline;
+}

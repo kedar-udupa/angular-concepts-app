@@ -1,0 +1,51 @@
+  
+    {
+        "name"  : "Adam",
+        "album" : "Dam",
+        "year"  : "2000",
+        "price" : "$10"
+    }
+
+    {
+        "name"  : "Bolt",
+        "album" : "B",
+        "year"  : "1999",
+        "price" : "$14"
+    }
+
+    {
+        "name"  : "Andrew",
+        "album" : "Andd",
+        "year"  : "2010",
+        "price" : "$4.6"
+    }
+
+    {
+        "name"  : "Rachael",
+        "album" : "Doop",
+        "year"  : "2002",
+        "price" : "$10"
+    }
+
+    {
+        "name"  : "Smith",
+        "album" : "DKS",
+        "year"  : "1990",
+        "price" : "$30"
+    }
+
+    {
+        "name"  : "John",
+        "album" : "Rally",
+        "year"  : "2017",
+        "price" : "$6"
+    }
+
+    {
+        "name"  : "Pete",
+        "album" : "Dumb",
+        "year"  : "2010",
+        "price" : "$15"
+    }
+
+ 
